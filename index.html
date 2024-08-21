@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="shortcur icon" href="images/AnyConv.com__f (5).ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+   $(document).ready(function(){
+	   //스크롤 이벤트
+	   //한번만수행하기 위한 조건식 생성을 위한 변수선언
+	   scection1_age = 0;  scection2_age = 0; scection3_age = 0; scection4_age = 0; scection5_age = 0;scection6_age = 0;scection7_age = 0;
+	   $(window).scroll(function(){
+		sc=$(window).scrollTop()// sc는 현재 스크롤값
+		$("#scroll_text").text(sc)//현재스크롤값을 문자로 표시
+		if(sc>500 && sc<= 800){ //스크롤이 500보다 크면 수행하시오
+             scection1_age=scection1_age+1 // 0->1 2 3 4 5 6 7
+			 if(scection1_age==1){$("#section1 h2").stop().animate({"margin-top":"140px","opacity":"1"},800)
+		$("#section1 p").stop().animate({"margin-top":"20px","opacity":"1"},800)
+		$("#section1_img1").stop().animate({"left":"0"},800)
+		$("#section1_img2").stop().animate({"bottom":"-80"},800,function(){
+			$("#section1_img2").animate({"left":"-100"},300)
+		})
+		$("#section1_img3").stop().animate({"bottom":"-35"},800,function(){
+			$("#section1_img3").animate({"right":"-20"},300)
+		})
+		 $("#section1_img4").stop().animate({"bottom":"0"},800)
+		$("#section1_img5").stop().animate({"right":"0"},800)
+		}//section1 나이 if괄호
+		}//section1 if 괄호끝
+
+       // else if(sc>=1200 && sc<=1500){
+	  // scection1_age=scection1_age+1 
+	  //if(scection2_age==1){
+	  // section2 내용넣기
+	  else if (sc>=1050 && sc<=1350)
+	  scection2_age=scection2_age+1
+	  if (scection2_age==1){
+		$("#section2 h3").animate({"margin-top":"230px","opacity":"1"},500)
+		$("#section2 p").animate({"margin-top":"35px","opacity":"1"},500)
+		$("#section2 button").animate({"margin-top":"20px","opacity":"1"},500)
+		$("#section2_box_img1").animate({"right":"420px"})
+		$("#section2_box_img2_warp").animate({"right":"-1100px"},function(){
+			$("#section2_box_img2").animate({"top":"-700px"},1800,function s2_s(){
+		$("#section2_box_img2").animate({"top":"0px"},1800,function(){
+			$("#section2_box_img2").animate({"top":"-700px"},1800,s2_s)
+		})
+	})
+		})
+	  }
+	  // } //section2 나이 if괄호끝
+	  else if(sc>=1800 && sc <=2200){
+		scection3_age=scection3_age+1
+		if(scection3_age==1){ ///////////-------section3--------////////////
+	$("#section3_box_right").animate({"top":"150px"},500)
+	$("#section3_box_right h2").animate({"opacity":"1"},500,function(){
+		$("#section3_box_right").animate({"right":"-500px","top":"200px"},500)
+        $("#section3_box_right p").animate({"opacity":"1"},500)
+		$("#section3_box_right button").slideDown();
+	})
+	$("#section3_box ul").animate({"top":"350px","opacity":"1"},500,function(){
+		$("#section3_box ul").animate({"top":"400px","opacity":"0"},500)
+	})
+	$("#section3_phone").delay(500).animate({"left":"50","opacity":"1"},800)
+    $("#section3_phone").css({"box-shadow":"0 10px 20px rgba(0,0,0,0.2)"})
+	///////////-------section3끝--------////////////
+		}
+	  }
+      else if(sc>=3500 && sc <=3900){
+		scection5_age=scection5_age+1
+    if(scection5_age==1){
+		///////////-------section5--------////////////
+   $("#section5_box_right h2").animate({"opacity":"1","margin-top":"-20px"},500)
+	$("#section5_box_right p").animate({"opacity":"1"},1000)
+	$("#section5_img1").animate({"right":"0"},800,)
+		$("#section5_img2").animate({"right":"220px"},800)
+		 $("#section5_img1").css({"box-shadow":"0 10px 20px rgba(0,0,0,0.2)"})
+	 ///////////-------section5끝--------////////////
+    }
+      }
+	else if(sc>=4300 && sc <=4700){
+		scection6_age=scection6_age+1
+		 if(scection6_age==1){
+        ///////////-------section5--------////////////
+       $("#section6 h2").animate({"opacity":"1","padding-top":"350px"},500)
+       $("#section6 p").animate({"opacity":"1"},2000)
+        ///////////-------section6끝--------////////////
+		 }
+	}
+	else if(sc>=5800 && sc <=6200){
+	scection7_age=scection7_age+1	
+    if(scection7_age==1){
+		///////////-------section7--------////////////
+ $("#section7_icon1").animate({"left":"-100px"},500)
+ $("#section7_icon2").animate({"top":"0px"},500)
+ $("#section7_icon3").animate({"right":"0px"},500)
+ $("#section7_phone").animate({"top":"0"},500)
+ $("#section7_box h2").animate({"margin-top":"0","opacity":"1"},500)
+ $("#section7_line").animate({"top":"-90","opacity":"1"},500)
+ $("#section7_box h4").animate({"opacity":"1","margin-top":"40px"},800)
+ $("#section7_bt").animate({"opacity":"1","margin-top":"40px"},800)
+  ///////////-------sectio7n끝--------////////////
+    }
+	}
+	else if(sc>=2700 && sc<=3100){
+	scection4_age=scection4_age+1	
+	if(scection4_age==1){
+		 ///////////-------section4시작--------////////////
+ $("#section4_box h3").stop().animate({"padding-top":"130px","opacity":"1"},500)
+ $("#section4_box p").stop().animate({"margin-top":"30px","opacity":"1"},900)
+ $("#section4 h2").stop().animate({"left":"0","opacity":"1"},900)
+ $("#section4_cardbox").stop().animate({"bottom":"120px"},800,function(){
+ $("#section4_card3").stop().animate({"left":"300px"},500)
+ $("#section4_card1").stop().animate({"left":"0"},500)
+ })
+  ///////////-------section4끝--------////////////
+	 }
+	}
+ }) // scroll괄호
+
+ 
+
+ $("#slide_bt li").click(function(){
+		   //순번을 이용하자. $(this).index() 를 하면 생성되는 숫자는 0 1 2
+        $(this).css({"background-color":"#ff0099"}).siblings().css({"background-color":"#fff"})
+        $("#slide").animate({left:($(this).index()*-100)+"%"},300)
+		$("#slide_textbox h2").text($(this).index()+1)
+	   })
+	   $("#menu").mouseenter(function(){
+		   $("header").stop().animate({"height":"285px"},300)}) //mouse와 같지만 자식을 포함
+	   $("#menu").mouseleave(function(){
+		   $("header").stop().animate({"height":"90px"},300)})
+       
+   $("#section4_cardbox").click(function(){
+	 $("#section4_bg li:nth-child(1)").animate({"left":"0"},300)
+	//카드3개가 모인 후, #section4_cardbox가 위로 올라감
+    $("#section4_card3, #section4_card1").stop().animate({"left":"150px"},400,function(){
+	$("#section4_cardbox").stop().animate({"bottom":"1000px"},300,function(){})
+	$("#section4_cardbox2").animate({"width":"278px"},300)
+	$("#section4_cardbox2").css({"box-shadow":"0 5px 10px rgba(0,0,0,0.4)"})
+      })
+	 $("#section4 h2").html("YOGA<br>PINK<span></span>").css({"color":"#fff","left":"-500px","opacity":"0"}).stop().animate({"left":"0","opacity":"1"},300).children().css({"background-color":"#fff"})
+	 $("#section4 h3,#section4 p").css({"color":"#fff"})
+	})
+
+	$("#card_pink").click(function(){
+		$("#card_blue").fadeIn().siblings().fadeOut(300)
+		$("#section4_bg li:nth-child(2)").animate({"left":"0"},300)
+		 $("#section4 h2").html("DIVING<br>BLUE<span></span>").css({"color":"#fff","left":"-500px","opacity":"0"}).stop().animate({"left":"0","opacity":"1"},300).children().css({"background-color":"#fff"})
+	})
+
+	$("#card_blue").click(function(){
+		$("#card_yellow").fadeIn().siblings().fadeOut(300)
+		$("#section4_bg li:nth-child(3)").animate({"left":"0"},300)
+		 $("#section4 h2").html("PINGPONG<br>YELLOW<span></span>").css({"color":"#fff","left":"-500px","opacity":"0"}).stop().animate({"left":"0","opacity":"1"},300).children().css({"background-color":"#fff"})
+	})
+
+	$("#card_yellow").click(function(){
+		$("#card_gray").fadeIn().siblings().fadeOut(300)
+		$("#section4_bg li:nth-child(4)").animate({"left":"0"},300)
+		 $("#section4 h2").html("LUCKY<br>GRAY<span></span>").css({"color":"#fff","left":"-500px","opacity":"0"}).stop().animate({"left":"0","opacity":"1"},300).children().css({"background-color":"#fff"})
+	})
+	$("#card_gray").click(function(){
+		$("#card_black").fadeIn().siblings().fadeOut(300)
+		$("#section4_bg li:nth-child(5)").animate({"left":"0"},300)
+		 $("#section4 h2").html("AWESOME<br>BLACK<span></span>").css({"color":"#fff","left":"-500px","opacity":"0"}).stop().animate({"left":"0","opacity":"1"},300).children().css({"background-color":"#fff"})
+	})
+	$("#card_black").click(function(){
+		$("#card_pink").fadeIn().siblings().fadeOut(300)
+		$("#section4_bg li").animate({"left":"100%"},300,function(){ $("#section4_bg li").css({"left":"-100%"}) })
+		$("#section4_cardbox2").animate({"width":"-125px"},300).css({"box-shadow":"none"})
+		$("#section4_cardbox").delay(300).animate({"bottom":"200px"},300,function(){
+			$("#section4_card3").animate({"left":"360px"},500)
+			$("#section4_card2").animate({"left":"180px"},500)
+			$("#section4_card1").animate({"left":"0px"},500)
+		})
+        
+		 $("#section4 h2").html("KONA<br>CARD<span></span>").css({"color":"#000","left":"-500px","opacity":"0"}).stop().animate({"left":"0","opacity":"1"},300).children().css({"background-color":"#fff"})
+	})
+
+
+	
+
+
+
+	    $("#slide_bt li").click(function(){
+		   //순번을 이용하자. $(this).index() 를 하면 생성되는 숫자는 0 1 2
+        $(this).css({"background-color":"#ff0099"}).siblings().css({"background-color":"#fff"})
+        $("#slide").animate({left:($(this).index()*-100)+"%"},300)
+		$("#slide_textbox h2").text($(this).index()+1)
+	   })
+	   $("#menu").mouseenter(function(){
+		   $("header").stop().animate({"height":"285px"},300)}) //mouse와 같지만 자식을 포함
+	   $("#menu").mouseleave(function(){
+		   $("header").stop().animate({"height":"90px"},300)})
+
+		   
+       
+   })
+  </script>
+  <style>
+   * { margin: 0; padding: 0; list-style: none;font-family: 'Nanum Gothic', sans-serif;}
+   a {color: inherit;text-decoration: none;}
+   button {cursor: pointer;}
+   header {width: 100%; height: 90px;border: 1px solid #000;line-height: 90px;position: fixed;left: 0;top: 0;z-index: 999;overflow: hidden;border-bottom: 1px solid #000;background: #fff url(images/gnb_bg.png) 550px 95px no-repeat;}
+   header #logo {float: left;height: 18px;margin-top: 36px;margin-left: 50px;}
+   header #logo img {vertical-align: top;}
+   header #menu {float: right;}
+   header #menu>li {float: left;margin-right: 60px;font-size: 16px;font-weight: 600;color: #636363;position: relative;}
+   header #menu>li:hover {cursor: pointer;}
+   .menu_text {position: relative;z-index: 99;}
+   .sub_menu {text-align: center;font-weight: 400;}
+   .sub_menu>li {line-height: 28px;font-size: 14px;color:#505050;}
+   header #menu>li:nth-child(2) li {margin-left: -10px;} 
+   header #menu>li:nth-child(3) li {margin-left: -8px;}
+   header #menu>li:nth-child(4) li {margin-left: -3px;}
+   header #menu>li:nth-child(5) li {margin-left: -6px;}
+   .sub_menu>li:hover {color: #f36;}
+   .menu_line {position: absolute;width: 100%;height: 8px;background-color: #ff3f64;left: 0;top: 48px;display: none;}
+   header #menu>li:hover .menu_line {display: inline;}
+   header #menu>li:nth-child(2) .menu_line {margin-left: -4px;width: 57px;}
+   header #menu>li:nth-child(3) .menu_line {margin-left: -4px;width: 57px;}
+   header #menu>li:nth-child(4) .menu_line {margin-left: -3px;}
+   header #menu>li:nth-child(5) .menu_line {margin-left: -2px;width: 70px}
+
+   #slide_wrap {width: 100%;height: 786px;overflow: hidden;position: relative;}
+   #slide {width: 300%;height: 786px;position: absolute;left: 0;top: 0;}
+   #slide li {width: 33.333%;height: 768px;float: left;}
+   #slide li:nth-child(1) {background: #fff url(images/slide2.jpg) 0 0 no-repeat;}
+   #slide li:nth-child(2) {background: #fff url(images/slide3.jpg) 0 0 no-repeat;}
+   #slide li:nth-child(3) {background: #fff url(images/slide4.jpg) 0 0 no-repeat;}
+   #slide_textbox {width: 150px;height: 200px;position: absolute;left: 250px;top: 140px;text-align: center;}
+   #slide_textbox h2 {text-align: center;font-size: 150px;font-weight: 400;}
+   #slide_pause {vertical-align: middle;margin-right: 10px;}
+   #slide_bt {display: inline-block;vertical-align: middle;}
+   #slide_bt li {width: 9px;height: 9px;border-radius:9px;background-color: #fff;display: inline-block;margin:2px 8px ;}
+   #slide_bt li:nth-child(1) {background-color: #f09;}
+    #slide_bt li:hover {cursor: pointer;}
+
+   #section1 {width: 100%;height: 760px;position: relative;text-align: center;overflow: hidden;}
+   #section1 h2 {font-size: 57px;font-weight: 100;margin-top: 200px;opacity: 0;}
+   #section1 p {font-size: 17px;margin-top: 32px;opacity: 0;}
+   #section1_img1 {position: absolute;left: -100px;top:-70px;bottom: 0;margin: auto;}
+   #section1_img2 {position: absolute;left: 0px;bottom: -360px;right: 0;margin: auto;}
+   #section1_img3 {position: absolute;left: 0px;bottom: -360px;right: 0px;margin: auto;}
+   #section1_img4 {position: absolute;left: 0px;bottom: -300px;right: -550px;margin: auto;}
+   #section1_img5 {position: absolute;top: -350px;bottom: 0;right: -100px;margin: auto;}
+
+#section2 { width: 100%; height: 800px; background-color: #ff4155; position: relative; overflow: hidden; }
+#section2_box { width: 1100px; height: 780px; margin: auto; margin-top: 8px;position: relative;color: #fff;border: 1px solid  rgb(40,100,200,0);}
+#section2 h3 {margin-left: 60px;font-size: 40px;font-weight: 400;margin-top: 260px;opacity: 0;}
+#section2 p {margin-left: 60px;margin-top: 55px;line-height:25px;font-size: 17px;opacity: 0;}
+#section2 button {border: 1px solid #fff;;width: 220px;height: 50px;font-size: 16px;background-color:transparent;color: #fff;margin-left: 60px;margin-top: 20px;opacity: 0;}
+#section2 button:hover {cursor: pointer;}
+#section2_box_img1 {position: absolute;right: 0px;top: 160px;}
+#section2_box_img2_warp {position: relative;width: 256px;height: 452px;top: -577px;overflow: hidden;right: -1520px;}
+#section2_box_img2 {position: absolute;left: -1px;top: 0;width: 256px;}
+
+#section3{width: 100%;height: 820px;}
+#section3_box {width: 1100px;height: 800px;margin: auto;position: relative;margin-top: 10px;}
+#section3_box_right {width: 500px;height: 250px;position: absolute;left: 0;right: 0;margin: auto;top: 200px;}
+#section3_box_right h2 {font-size: 38px;font-weight: 400;opacity: 0;}
+#section3_box_right p {margin-top: 30px;color: #6e6e6e;opacity: 0;}
+#section3_box_right button {width: 210px;height: 45px;border: 1px solid #000;background-color: transparent;margin-top: 20px;font-size: 15px;display: none;}
+#section3_box ul {width: 800px;height: 200px;position: absolute;left: 0;right: 0;top: 380px;margin: auto;text-align: center;opacity: 0;}
+#section3_box ul li {display: inline-block;vertical-align: top;margin: 10px;}
+#section3_box ul li:nth-child(2) {margin-top: 60px;}
+#section3_box ul li:nth-child(4) {margin-top: 60px;}
+#section3_box ul li:nth-child(1) h4 {color: #f09;}
+#section3_box ul li h4 {margin-top: 15px;font-weight: 400;}
+#section3_phone {position: absolute;top: 0;bottom: 0;left: -500px;margin: auto;opacity: 0;box-shadow: 0 10px 20px rgba(0,0,0,0.2);border-radius:50px;transition:box-shadow 0.8s 0.5s;}
+/*transition:대상 속도 지연시간*/
+
+#section4 {width: 100%;height: 1000px;background-color: #f2f2f2;overflow: hidden;position: relative;}
+#section4_box {width: 1100px;height: 980px;border: #000;margin-top: 10px;position: relative;left: 0;right: 0;margin: auto;}
+#section4_box h3 {font-size: 35px;font-weight: 400;padding-top: 180px;opacity: 0;}
+#section4_box p {font-size: 16px;color: #575757;margin-top: 45px;opacity: 0;}
+#section4 h2 {position: absolute;font-size: 95px;left: -250px;bottom: 270px;opacity: 0;}
+#section4 h2 span {width: 190px;height: 8px;background-color: #000;display: inline-block;vertical-align: middle;margin-left:70px;}
+#section4_cardbox{width: 620px;height: 520px;position: absolute;bottom: 1000px;right: -120px;}
+#section4_card3 {position: absolute;left: 150px;}
+#section4_card2 {position: absolute;left: 150px;}
+#section4_card1 {position: absolute;left: 150px;}
+#section4_bg {width: 100%;height: 100%;position: absolute; left: 0; top: 0;}
+#section4_bg li {position: absolute;width: 100%;left:-100%;top: 0;height: 1000px;}
+#section4_bg li:nth-child(1) {background-color: #ff2c68;}
+#section4_bg li:nth-child(2) {background-color: #005cb9;}
+#section4_bg li:nth-child(3) {background-color: #ffe809;}
+#section4_bg li:nth-child(4) {background-color: #707272;}
+#section4_bg li:nth-child(5) {background-color: #2a2a2a;}
+#section4_cardbox2 {width: 0;height: 446px;position: absolute;bottom: 230px;right: -520px;left: 0;margin: auto;transition:box-shadow 0.3s;border-radius: 5px;}
+#section4_cardbox2 img {position: absolute;width: 100%;height: 100%;left: 0;top: 0;display: none;}
+#section4_cardbox2 #card_pink {display: block;}
+
+
+#section5{width: 1100px;height: 820px;margin: auto;position: relative;}
+
+#section5_box{width: 500px;height: 600px;position: absolute;top: 0;bottom: 0;left:0px;margin: auto;}
+#section5_box_right{width: 500px;height: 250px;position: absolute;top: 0;bottom:0;margin: auto;right: 0;}
+#section5_img1 {position: absolute;top: 0;bottom: 0;margin: auto;right: 20px;z-index: 99;border-radius:50px}
+#section5_img2 {position: absolute;top: 60px;bottom: 0;margin: auto;right: 20px;}
+#section5_box_right h2{font-size: 38px;font-weight: 400;opacity: 0;margin-top: 20px;}
+#section5_box_right p{margin-top: 30px;color: #6e6e6e;opacity: 0;}
+
+
+#section6{width: 100%;height: 900px;background: #fff url(images/section07_bg.png) 0 0 no-repeat;background-attachment: fixed;
+background-size: cover;text-align: center;color: #fff;}
+#section6 h2{font-size: 38px;font-weight: 400;padding-top: 400px;opacity: 0;}
+#section6 p {font-size: 16px;fw400;margin-top: 25px;opacity: 0;}
+
+
+#news{width: 100%;height: 700px;margin: auto;}
+#news_box1{width: 100%;height: 450px;}
+#news_box1_center{width: 1400px;height: 450px;margin: auto;}
+#news_box1_title {width: 1400px;height: 65px;margin-top: 50px;}
+#news_box1_title h2{font-size: 42px;float: left;font-weight: 400;}
+#news_box1_title h4 {float: right;font-size: 15px;border-bottom: 1px solid #000;line-height: 25px;margin-top: 19px;font-weight: 400;}
+#news_box1_center ul {width: 1400px;height:295px;margin-top: 25px;}
+#news_box1_center ul li {width: 400px;margin-right: 100px;height: 295px;float: left;}
+#news_box1_center ul li:nth-child(3) {margin-right: 0;}
+#news_box1_center ul li h3 {font-size: 19px;font-weight: 400;margin-top: 20px;}
+#news_box1_center ul li p {font-size: 15px;}
+#news_line {width: 25px;height: 2px;background-color: #f39;margin-top: 20px;margin-bottom: 30px;}
+
+#news_box2{width: 100%;height: 250px;}
+#news_box2_center{width: 1400px;height: 250px;margin: auto;}
+
+
+#section7{width: 100%;height: 500px;background-color: #ff4155;position: relative;overflow: hidden;}
+#section7_icon1{position: absolute;top: 80px;bottom: 0;margin: auto;left: -180px;}
+#section7_icon2{position: absolute;top: -100px;right: 0;left: -1200px;margin: auto;}
+#section7_icon3{position: absolute;right: -100px;bottom: 0;}
+#section7_phone{position: absolute;right: -700px;left: 0;margin: auto;top: -450px;}
+#section7_box{width: 550px;height: 300px;position: absolute;top: 50px;right: 0;left: -320px;margin: auto;bottom: 0;}
+#section7_box{color: #fff;}
+#section7_line{width: 260px;height: 3px;background-color: #fff;position: absolute;left: 0;right: -10px;bottom: 0;top: -30px;margin: auto;opacity: 0;}
+#section7_box h2{font-size: 60px;font-weight: 400;letter-spacing: 0.2em;margin-top: 30px;opacity: 0;}
+#section7_box h4 {margin-top: 70px;opacity: 0;font-weight: 400;}
+#section7_bt p {font-size: 11px;margin-left: 28px;margin-top: 14px;}
+#section7_bt p span {font-size: 17px;}
+#section7_bt {margin-top: 70px;opacity: 0;}
+#section7_bt img {width: 24px;float: left;margin-top: 12px;margin-left: 20px;}
+#section7_bt li:hover {cursor: pointer;background-color: rgba(0,0,0,0.8)}
+#section7_bt li:nth-child(2) img {margin-top: 18px;}
+#section7_bt li{ width: 210px;height: 60px;background-color: rgba(0,0,0,0.5);text-align: center;float: left;margin-left: 20px;}
+
+
+#scroll_text {position: fixed;font-size: 100px;background-color:yellow;border: 1px solid #000;left: 0;top: 0;z-index: 1000;}
+
+#news_box2_notice {width: 70%;background-color: #fff;height: 100%;float: left;}
+#news_box2 table {width: 116%;margin-top: 49px;font-size: 15px;}
+#news_box2 table td {padding-top: 15px;}
+
+#news_box2_customer {position: relative;}
+#news_box2_customer h3 {position: absolute;font-size: 22px;font-weight: 400;left: 70px;top: 53px;}
+#news_box2_customer h4 {position: absolute;font-size: 10px;left: 70px;top: 100px;}
+#news_box2_customer h5 {position: absolute;font-size: 26px;font-weight:900;left: 210px;top: 100px;}
+#news_box2_customer h6 {position: absolute;font-size: 13px;color: rgb(109, 109, 109);left: 210px;top: 137px;}
+#news_box2_customer p {position: absolute;font-size: 13px;color: rgb(109, 109, 109);left: 70px;top: 160px;}
+#news_box2_customer_line {position: absolute;width: 295px;height: 1px;background-color: rgb(109, 109, 109,0.3);left: 70px;bottom: 55px;}
+
+#news_box2 table tr:nth-child(1) th:nth-child(1) {text-align: left;font-size: 24px;}
+#news_box2 table tr:nth-child(1) th:nth-child(2) {text-align: left;padding-left: 38px;font-size: 14px;}
+#news_box2_customer {width: 30%;height: 100%;float: right;}
+
+footer {background-color: rgb(43, 43, 43);}
+#f_menu li {float: left;margin-right: 10px;color: #fff;font-size: 14px;font-weight: 400;}
+#f_menu li:nth-child(3) {color: rgb(120, 201, 161);}
+#f_menu {margin-left: 250px;padding-top: 50px;}
+#footer_box2 {margin-top: 70px;margin-left: 250px;}
+#footer_box2  h3 {color: #fff;}
+#footer_p1 {font-size: 14px;margin-top: 20px;color: #788a8a;}
+#footer_p2 {font-size: 12px;margin-top: 15px;color: #788a8a;}
+#footer_img1 {width: 75px;margin-top: 10px;margin-bottom: 45px;}
+    
+  </style>
+ </head>
+ <body>
+  <header>
+  	<h1 id="logo"><img src="images/t_logo.jpg" alt=""></h1>
+  	<ul id="menu">
+  		<li><span class="menu_text">코나카드 소개</span> <div class="menu_line	"></div>	
+		<ul class="sub_menu">
+  			<li>코나카드란?</li>
+  			<li>카드 신청,관리</li>
+  			<li>코나카드샵</li>
+  			<li>혜택 가이드</li>
+  			<li>앱 이용안내</li>
+  		</ul></li>
+  		<li><span class="menu_text">파트너</span><div class="menu_line	"></div>	<ul class="sub_menu">
+  			<li>제휴 브랜드</li>
+  		</ul></li>
+  		<li><span class="menu_text">이벤트</span><div class="menu_line	"></div>	<ul class="sub_menu">
+  			<li>진행이벤트</li>
+  		</ul></li>
+  		<li><span class="menu_text">미디어</span><div class="menu_line	"></div>	<ul class="sub_menu">
+  			<li>언론기사</li>
+  		</ul></li>
+  		<li><span class="menu_text">고객지원</span><div class="menu_line	"></div>	<ul class="sub_menu"> 
+  			<li>공지사항</li>
+  			<li>FAQ</li>
+  			<li>제휴문의</li>
+  			<li>고객상담안내</li>
+  		</ul></li>
+  	</ul>
+</header>
+ <!-- slide 시작  -->
+ <div id="slide_wrap">
+ 	<ul id="slide">
+ 		<li></li>
+ 		<li></li>
+ 		<li></li>
+ 	</ul>
+ 	<div id="slide_textbox">
+ 		<h2>1</h2>
+ 		<img src="images/pause_icon.png" alt="" id="slide_pause">
+ 		<ul id="slide_bt">
+ 			<li></li>
+ 			<li></li>
+ 			<li></li>
+ 		</ul>
+ 	</div>
+ </div>
+
+<!--section1 시작-->
+<div id="section1">
+	<h2>매달 혜택이 업데이트<br>
+코나카드</h2>
+	<p>365일 내내 즐기는 혜택부터 트렌드에 맞춘 이달의 혜택까지! <br>	
+나에게 맞춘 예산과 디자인으로 즐겨보세요.</p>
+	<img src="images/section02_bg01.png" alt="" id="section1_img1">
+	<img src="images/awesome_black01.png" alt="" id="section1_img2">
+	<img src="images/yoga_pink01.png" alt="" id="section1_img3">
+	<img src="images/section02_bg02.png" alt="" id="section1_img4">
+	<img src="images/section02_bg03.png" alt="" id="section1_img5">
+</div>	
+<div id="section2">
+		<div id="section2_box">
+			<h3>하나, 코나카드만의 <br>
+				업데이트 혜택을 즐겨보세요</h3>
+			<p>365일 내내 즐기는 혜택부터<br>
+				트렌드에 따라 매달 업데이트되는 이달의 혜택까지!<br>
+				연회비 없이 한 장의 코나카드로 모든 혜택을 즐겨보세요.
+			</p>
+			<button>혜택 가이드</button>
+		</div>
+			<img src="images/section03_display.png" alt="" id="section2_box_img1">
+			<div id="section2_box_img2_warp"><img src="images/section03_display_contents.png" alt="" id="section2_box_img2"></div>
+			
+		
+		</div>
+<!-- section2 영역끝-->
+		<div id="section3">
+			<div id="section3_box">
+			<img src="images/section04_2.png" alt="" id="section3_phone"> 
+			<div id="section3_box_right">
+				<h2>둘, 나의 예산에 맞추어<br>충전해보세요</h2>
+				<p>언제 어디서나 모바일로 카드 충전을 할 수 있으니까! <br>
+이젠 나의 예산에 맞추어 충전하고 사용해보세요.</p>
+				<button>앱 이용안내</button>
+			</div><!-- section3_box_right끝-->
+			<ul>
+					<li>
+						<img src="images/section04_1_1.png" alt="">
+						<h4>코나카드를 통한 <br> 예산 플래닝</h4>
+					</li>
+					<li>
+						<img src="images/section04_1_2.png" alt="">
+					</li>
+					<li>
+						<img src="images/section04_1_3.png" alt="">
+						<h4>충동구매↓</h4>
+					</li>
+					<li>
+						<img src="images/section04_1_4.png" alt="">
+						</li>
+					<li>
+						<img src="images/section04_1_1.png" alt="">
+						<h4>과소비↓</h4>
+					</li>
+				</ul>
+			</div><!-- section3_box 끝-->
+		</div><!-- section3 끝-->
+<!-- -->
+<!--div#section4-->
+<!--section4 시작-->
+<div id="section4">
+	<ul id="section4_bg">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+		<div id="section4_box">
+			<h3>셋, 나의 스타일대로 <br> 카드를 선택해보세요</h3>
+			<p>카드사에서 정해주는 하나의 디자인은 그만! <br> 이젠 직접 카드 디자인을 선택하고 사용해보세요.</p>
+			<h2>KONA<br>CARD<span></span></h2>
+			<div id="section4_cardbox">
+				<img src="images/section05_1_3.png" alt="" id="section4_card3">
+				<img src="images/section05_1_2.png" alt="" id="section4_card2">
+				<img src="images/section05_1_1.png" alt="" id="section4_card1">	
+			</div>
+			<div id="section4_cardbox2">
+		<img src="images/card_pink.png" alt="" id="card_pink">
+		<img src="images/card_blue.png" alt="" id="card_blue">
+		<img src="images/card_yellow.png" alt="" id="card_yellow">
+		<img src="images/card_gray.png" alt="" id="card_gray">
+		<img src="images/card_black.png" alt="" id="card_black">
+	 </div>
+	</div>
+	</div>
+	
+	<!-- -->
+<!-- -->
+<div id="section5">
+	<div id="section5_box">
+		<img src="images/section06_card_01.png" alt="" id="section5_img1">
+		<img src="images/section06_card_02.png" alt="" id="section5_img2">
+		</div>
+		<div id="section5_box_right">
+			<h2>넷, 안전하게 결제하고 <br>
+편리하게 관리해보세요
+</h2>
+			<p>코나카드로 소중한 내 돈은 안전하게 결제하고, <br>
+모바일에서 충전하고 이용내역을 확인하니까 편리하게 관리하고!<br>
+지금 바로 코나카드 앱에서 만나보세요.</p>
+		
+	</div>
+</div>
+<!-- -->
+<div id="section6">
+	<h2>매일매일 어디서나 <br>
+나와 함께하는 카드!</h2>
+	<p>이젠 코나카드와 함께 내가 원하는 컬러나 <br>
+일러스트의 IC 실물 카드로 나를 표현해보세요.</p>
+</div>
+<!-- -->
+<div id="news">
+	<div id="news_box1">
+		<div id="news_box1_center">
+			<div id="news_box1_title">
+				<h2>언론기사</h2>
+				<h4><a href="#">+더보기</a></h4>
+			</div>
+			<ul>
+				<li>
+				<h3>
+코나아이, 3년 연속 ‘iF 디자인 어워드’ 수상</h3>
+				<div id="news_line"></div>
+				<p>핀테크 기업 코나아이가 '2021 iF 디자인 어워드'의 <br> 커뮤니케이션 브랜딩 부문에서 2관왕을 달성했다.<br>코나아이는 사회적 플랫폼 서비스 '로컬히어로'와 인천 서구의 지역화폐 '서로e음'의 브랜드 아이덴티티(BI)로 본상을 수상하게 되었으며 </p>
+				<h5>2021/05/03</h5>
+				</li>
+				<li>
+				<h3>
+코나아이, 밀양시 지역화폐 ‘밀양사랑카드’ 출시</h3>
+				<div id="news_line"></div>
+				<p>코나아이가 어제(4월26일)부터 밀양 카드형 지역화폐인 <br>'밀양사랑카드' 발행을 시작했다.코나아이는 지난 2월<br> 밀양시 카드형 지역화폐 운영 사업자 선정 입찰을 통해 밀양사랑카드 운영사로 선정되었으며 밀양사랑카드 신청, 발급부터 플랫폼 운영 및 관리를 맡는다.</p>
+				<h5>2021/04/27</h5>
+				</li>
+				<li>
+				<h3>
+코나아이, 마스터카드 지문카드 제품 인증 획득(2021.04.26)</h3>
+				<div id="news_line"></div>
+				<p>핀테크 기업 코나아이(대표 조정일)는 국내 최초로 <br> 마스터카드의 지문카드 제품 인증을 획득했다고 26일<br> 밝혔다.마스터카드의 지문카드 제품 인증은 생체 인식 성능 평가, 카드 생산 능력, 품질관리, ISO 및 마스터카드 표준 충족 등 다양한 평가를 거쳐 부여된다. 코나아이는 국내 최초로 지문카드 제품 인증을 획득하게 됐다.</p>
+				<h5></h5>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="news_box2">
+		<div id="news_box2_center">
+			<div id="news_box2_notice"><table>
+				<tr>
+				   <th>공지사항</th>
+				   <th><a href="#">+more</a></th>
+				</tr>
+				<tr>
+				   <td>[안내] 코나 카드 연장 혜택 안내</td>
+				   <td>2021/07/16</td>
+				</tr>
+				<tr>
+				   <td>[공지] 하나은행 서비스 순단 발생 안내(07/05)</td>
+				   <td>2021/07/02</td>
+				</tr>
+				<tr>
+				   <td>[공지]부산은행 서비스 일시 중단 안내(07/04)</td>
+				   <td>2021/06/30</td>
+				</tr>
+				</table></div>
+			<div id="news_box2_customer">
+				<h3>고객센터</h3>
+				<h4>CUSTOMER <br> SERVICE CENTER</h4>
+				<h5>1899.4118</h5>
+				<h6>평일 : AM 09:00 ~ PM 18:00</h6>
+				<p>(공휴일 휴무)</p>
+				<div id="news_box2_customer_line"></div>
+			</div>
+		</div>
+	</div>
+</div>			
+<!-- -->
+<div id="section7">
+	<img src="images/section02_bg02.png" alt="" id="section7_icon1">
+	<img src="images/section09_bg01.png" alt="" id="section7_icon2">
+	<img src="images/section09_bg03.png" alt="" id="section7_icon3">
+	<div id="section7_box">
+		<h2>KONACARD <br>APP</h2>
+        <div id="section7_line"></div>
+		<h4>매달 혜택이 업데이트 코나카드 <br>
+지금 바로 코나카드 앱에서 만나보세요.</h4>
+		<ul id="section7_bt">
+			<li><img src="images/ios_bg.png" alt=""> <p>DOWNLOAD ON THE  <br><span>APP STORE</span></p></li>
+			<li><img src="images/and_bg.png" alt=""> <p>ANDROID APP ON <br><span>GOOGLE PLAY</span></p></li>
+		</ul>
+		</div>
+	<img src="images/section09_bg04.png" alt="" id="section7_phone">
+</div>
+<!-- -->
+
+<footer>
+	<div id="footer_box">
+		<div id="footer_box1">
+	    <ul id="f_menu">
+		<li>전자금융거래 이용약관 |</li>
+		<li>코나카드 서비스 이용약관 |</li>
+		<li>개인정보처리방침 |</li>
+		<li>개인정보 수집·이용 동의 |</li>
+		<li>위치기반서비스 이용 약관 |</li>
+		<li>마케팅 정보 수신 동의 |</li>
+		<li>사이트맵</li>
+		</ul></div>
+
+<div id="footer_box2"><h3>KONA i</h3>
+<p id="footer_p1">주소 : 서울특별시 영등포구 은행로 3 익스콘벤처타워 8층 대표자:조정일 <br>
+	사업자등록번호 : 109-81-53365 고객센터 : 1899-4118</p>
+		<p id="footer_p2">COPYRIGHT KONA I CO., LTD. ALL RIGHTS RESERVED.</p>
+	<img src="images/award_logo.png" alt="" id="footer_img1">
+	
+	</div></div>
+</footer>		
+<!-- -->
+<!-- <h1 id="scroll_text">0</h1> -->
+ </body>
+</html>
